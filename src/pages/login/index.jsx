@@ -30,24 +30,24 @@ const Login = () => {
   >
     <Form.Item
       name="@username"
-      rules={[{ required: true, message: 'Please input your Username!' }]}
+      rules={[{ required: true, message: '请输入用户名!' }]}
     >
-      <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+      <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="用户名（admin）" />
     </Form.Item>
     <Form.Item
       name="@password"
-      rules={[{ required: true, message: 'Please input your Password!' }]}
+      rules={[{ required: true, message: '请输入密码！' }]}
     >
       <Input
         prefix={<LockOutlined className="site-form-item-icon" />}
         type="password"
-        placeholder="Password"
+        placeholder="密码（admin）"
       />
     </Form.Item>
 
     <Form.Item>
       <Button type="primary" htmlType="submit" className="login-form-button">
-        Log in
+       登录
       </Button>
     </Form.Item>
   </Form>

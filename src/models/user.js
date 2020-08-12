@@ -1,26 +1,14 @@
-import { queryCurrent, query as queryUsers } from '@/services/user';
+/*
+ * @Author: wangzhichiao<https://github.com/wzc570738205>
+ * @Date: 2020-08-05 09:34:05
+ * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
+ * @LastEditTime: 2020-08-11 11:08:12
+ */
 
 const UserModel = {
   namespace: 'user',
   state: {
     currentUser: {},
-  },
-  effects: {
-    *fetch(_, { call, put }) {
-      const response = yield call(queryUsers);
-      yield put({
-        type: 'save',
-        payload: response,
-      });
-    },
-
-    *fetchCurrent(_, { call, put }) {
-      const response = yield call(queryCurrent);
-      yield put({
-        type: 'saveCurrentUser',
-        payload: response,
-      });
-    },
   },
   reducers: {
     saveCurrentUser(state, action) {
