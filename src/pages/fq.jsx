@@ -81,6 +81,7 @@ const dataSource1 = [
       range: '￥200',
       difficult: '提供部署文档',
       speed: '不限',
+      useTime:'永久',
       size: '一周',
     },
     {
@@ -89,6 +90,7 @@ const dataSource1 = [
       range: '￥350',
       difficult: '提供部署文档以及部署指导',
       speed: '不限',
+      useTime:'永久',
       size: '2个月',
     },
     {
@@ -97,6 +99,7 @@ const dataSource1 = [
       range: '￥500',
       difficult: '提供部署文档以及部署支持',
       speed: '不限',
+      useTime:'永久',
       size: '半年',
     },
   ];
@@ -121,6 +124,11 @@ const dataSource1 = [
       title: '调用次数',
       dataIndex: 'speed',
       key: 'speed',
+    },
+    {
+      title: '使用时长',
+      dataIndex: 'useTime',
+      key: 'useTime',
     },
     {
       title: '技术支持时长',
