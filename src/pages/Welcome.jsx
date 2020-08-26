@@ -3,6 +3,7 @@ import { Typography, Avatar, Tooltip } from 'antd';
 import pay from '../assets/pay.png';
 import one from '../assets/payuser/1.jpg';
 import two from '../assets/payuser/2.jpg';
+import three from '../assets/payuser/3.png';
 
 const { Title, Paragraph, Text, Link } = Typography;
 
@@ -60,7 +61,19 @@ export default () => (
       </Link>{' '}
       ，我们希望借助社区的资源对开源项目进行相关的宣传推广，并作为一个长期项目助力开源事业的发展，与广大开发者共建开源新生态。
     </Paragraph>
+    <Title level={3}>赞助商</Title>
+    <Paragraph>
+
+    <a href="http://www.lipinyun.com/" rel="noreferrer" target="_blank">
+      <Tooltip title="礼品云:专业小礼品代发" placement="top">
+        <img src={three} alt="礼品云:专业小礼品代发" width='150px'/>
+      </Tooltip>
+    </a>
+    </Paragraph>
+
     <Title level={3}>赞助者</Title>
+    <Paragraph>
+
     <Avatar.Group>
       <Tooltip title="东欢商贸报单号" placement="top">
         <Avatar size="large" src={one} />
@@ -69,6 +82,8 @@ export default () => (
         <Avatar size="large" src={two} />
       </Tooltip>
     </Avatar.Group>
+    </Paragraph>
+
     <Title level={3}>赞助</Title>
     <Paragraph>
       <img src={pay} alt="" width="400px" />
