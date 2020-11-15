@@ -1,5 +1,5 @@
 import React from "react";
-import {Typography} from 'antd';
+import {Typography,Alert} from 'antd';
 import Code from './code'
 
 const {Title, Text, Paragraph, Link} = Typography;
@@ -35,13 +35,15 @@ onLoad: function() {
 }`
   return (
     <Typography>
+      <Alert message="此方式不推荐，请使用api调用"  showIcon banner />
+      <Alert message="此方式初次加载会请求所以省市区数据到客户端，不推荐"  showIcon banner />
       <Title level={4}>小程序引入</Title>
       <Paragraph>
         将仓库中的 <Text code>smartWeChat</Text>文件夹拷贝到项目中<Text code>app.js</Text>的同级目录
       </Paragraph>
       <img src="https://gitee.com/Wzhichao/img/raw/master/uPic/P2DFuD45%20.png" alt=""/>
       <br/>
-      <Paragraph>
+      <Paragraph>/8n 
         这里需要将demo里的接口替换为后台提供的接口，接口格式返回可以参考<Link href='https://wangzc.wang/addressJson/1'>addressJson</Link>
       </Paragraph>
 

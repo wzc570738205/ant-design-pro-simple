@@ -2,7 +2,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2020-08-05 09:34:05
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2020-08-06 11:30:22
+ * @LastEditTime: 2020-11-12 23:13:38
  */
 /**
  * 在生产环境 代理是无法生效的，所以这里没有生产环境的配置
@@ -13,11 +13,11 @@
  */
 export default {
   dev: {
-    '/api/': {
-      target: 'https://preview.pro.ant.design',
+    '/api': {
+      target: 'http://localhost:8081',
       changeOrigin: true,
       pathRewrite: {
-        '^': '',
+        '^/api': '',
       },
     },
     "/bdsp/interManager": {

@@ -78,29 +78,22 @@ const dataSource1 = [
     {
       key: '1',
       type: '初级部署包',
-      range: '￥200',
+      range: '￥500',
       difficult: '提供部署文档',
       speed: '不限',
       useTime:'永久',
       size: '一周',
-    },
-    {
-      key: '2',
-      type: '中级部署包',
-      range: '￥350',
-      difficult: '提供部署文档以及部署指导',
-      speed: '不限',
-      useTime:'永久',
-      size: '2个月',
+      code:"不支持"
     },
     {
       key: '3',
       type: '高级部署包',
-      range: '￥500',
+      range: '￥1000',
       difficult: '提供部署文档以及部署支持',
       speed: '不限',
       useTime:'永久',
       size: '半年',
+      code: '支持'
     },
   ];
   
@@ -119,6 +112,11 @@ const dataSource1 = [
       title: '服务方式',
       dataIndex: 'difficult',
       key: 'difficult',
+    },
+    {
+      title: '二次开发',
+      dataIndex: 'code',
+      key: 'code',
     },
     {
       title: '调用次数',

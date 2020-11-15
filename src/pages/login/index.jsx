@@ -10,13 +10,13 @@ import './index.less';
 const Login = () => {
   const history = useHistory();
   const onFinish = async (values) => {
-    const params = { input: values };
-    const response = await fakeAccountLogin(params).then((res) => JSON.parse(res.data));
-    if (Number(response[0].table_count)) {
+    const response = await fakeAccountLogin(values).then((res) => res.data);
+    console.log(response)
+    if (response) {
       message.success('登录成功');
       history.push('/');
     } else {
-      message.error('用户不存在');
+      message.error('用户名或者密码错误');
     }
   };
 
@@ -29,13 +29,13 @@ const Login = () => {
     onFinish={onFinish}
   >
     <Form.Item
-      name="@username"
+      name="userName"
       rules={[{ required: true, message: '请输入用户名!' }]}
     >
       <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="用户名（admin）" />
     </Form.Item>
     <Form.Item
-      name="@password"
+      name="passWord"
       rules={[{ required: true, message: '请输入密码！' }]}
     >
       <Input
