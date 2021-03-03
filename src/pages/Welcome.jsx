@@ -4,6 +4,7 @@ import pay from '../assets/pay.png';
 import one from '../assets/payuser/1.jpg';
 import two from '../assets/payuser/2.jpg';
 import three from '../assets/payuser/3.png';
+import four from '../assets/payuser/4.jpg';
 
 const { Title, Paragraph, Text, Link } = Typography;
 
@@ -64,6 +65,9 @@ export default () => (
     <Title level={3}>赞助商</Title>
     <Paragraph>
 
+    <Tooltip title="卡夫" placement="top">
+        <img src={four} alt="卡夫" width='50px'/>
+      </Tooltip>
     <a href="http://www.lipinyun.com/" rel="noreferrer" target="_blank">
       <Tooltip title="礼品云:专业小礼品代发" placement="top">
         <img src={three} alt="礼品云:专业小礼品代发" width='150px'/>
